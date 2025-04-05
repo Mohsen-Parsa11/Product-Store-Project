@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+.header_link:hover {
+  color: #ff8f9c;
+  transition: all 0.4s;
+}
+
+.header_link::after {
+  background-color: #ff8f9c;
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  bottom: -5px;
+  left: 0;
+  scale: 0;
+  transform-origin: left;
+  transition: all 0.4s;
+}
+
+.header_link:hover::after {
+  scale: 1;
+}
+
+.background_image {
+  background-image: url("../assets//testimonials.jpg");
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+a.transition {
+  transition: all;
+  transition-duration: 0.2s;
+}
+
+.user:hover + .login {
+  display: block;
+}
+
+.loginBackgroundImage {
+  background-image: url("../assets/login.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+
+.mobile{
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: fadeInScale 0.6s ease-out forwards;
+  }
+
+
+@keyframes fadeInScale {
+  from{
+    opacity: 0;
+    transform: scaleX(0);
+  }
+  to{
+    opacity: 0.8;
+    transform: scaleX(1);
+  }
+}
