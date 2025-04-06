@@ -15,7 +15,7 @@ async function Store() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 my-5">
           {data.products.map((item) => (
-            <div key={item.id} className="border shadow-lg rounded-md p-2">
+            <div key={item.id} className="border border-gray-200 shadow-lg rounded-md p-2">
               <Link href={`/store/${item.id}`}>
                 <img
                   src={item.thumbnail}

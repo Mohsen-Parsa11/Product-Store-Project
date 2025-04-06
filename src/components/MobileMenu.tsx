@@ -7,7 +7,9 @@ import { AiOutlineHome, AiOutlineAppstore } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import { CgShoppingCart } from "react-icons/cg";
 import Link from "next/link";
-
+import { useShopingCartContext } from "./ShopingCartContext";
+import { redirect } from "next/navigation";
+import cookie from "js-cookie"
 
 
 function MobileMenu() {
@@ -21,6 +23,17 @@ function MobileMenu() {
   const handleCloseMobileMenu= ()=>{
     setMobileMenu("hidden")
   }
+
+  const handleLogin= ()=>{
+    redirect("/login")
+  }
+
+  const handleLogout= ()=>{
+    cookie.remove("token")
+    redirect("/login")
+  }
+
+  const {totalProductQty}= useShopingCartContext();
 
   return (
     <div>
@@ -48,16 +61,6 @@ function MobileMenu() {
               </Link>
               <div className="border-b border-gray-400 pb-1"></div>
 
-              <Link href="/" className="relative">
-                Jewelry
-              </Link>
-              <div className="border-b border-gray-400 pb-1"></div>
-
-              <Link href="/" className="relative">
-                Perfume
-              </Link>
-              <div className="border-b border-gray-400 pb-1"></div>
-
               <Link href="/dashboard" className="relative">
                 Dashboard
               </Link>
@@ -66,6 +69,11 @@ function MobileMenu() {
               <Link href="/cart" className="relative">
                 Cart
               </Link>
+              <div className="border-b border-gray-400 pb-1"></div>
+
+              <button onClick={handleLogin} className="bg-[#ff8f9c] px-5 mt-2 py-1 rounded mx-auto active:scale-98 shadow active:shadow-none cursor-pointer text-white">login</button>
+              <div className="border-b border-gray-400 pb-1"></div>
+              <button onClick={handleLogout} className="bg-rose-500 px-4 mt-2 py-1 rounded mx-auto active:scale-98 shadow active:shadow-none cursor-pointer text-white">logout</button>
             </div>
           </div>
 
@@ -74,7 +82,7 @@ function MobileMenu() {
             <Link href="/cart" className="relative">
               <CgShoppingCart className="cursor-pointer" />
               <p className="text-xs bg-red-500 text-white absolute top-0 left-4 h-4 w-4 rounded-full flex items-center justify-center">
-                0
+                {totalProductQty}
               </p>
             </Link>
             <Link href="/">
@@ -83,7 +91,7 @@ function MobileMenu() {
             <div className="relative">
               <FiHeart className="cursor-pointer" />
               <p className="text-xs bg-red-500 text-white absolute top-0 left-3 h-4 w-4 rounded-full flex items-center justify-center">
-                0
+                21
               </p>
             </div>
             <Link href="/dashboard">

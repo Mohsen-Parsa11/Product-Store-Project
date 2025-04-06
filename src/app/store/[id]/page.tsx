@@ -20,7 +20,7 @@ async function ProductItem({params}:Iprops) {
       <Container>
         <div className="w-full py-4 my-5 shadow border border-gray-300 px-3 lg:px-10 flex flex-col md:flex-row">
           <img src={data?.thumbnail} alt="image" className="h-60 w-60 " />
-          <div className="py-10 lg:px-10">
+          <div className="py-10 lg:px-10 md:ml-8">
           <p className="text-gray-600 text-2xl line-clamp-1"><span className="font-bold">Title</span>: {data?.title}</p>
           <p className="text-gray-500 line-clamp-3 my-1 "><span className="font-bold">Description</span>: {data?.description}</p>
           <p className="text-gray-400 text-lg"><span className="font-bold">Rating</span>: {data?.rating}</p>
