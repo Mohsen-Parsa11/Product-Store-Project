@@ -34,7 +34,7 @@ function Login() {
       <div
         className={`loginBackgroundImage shadow-lg rounded bg-gray-00 max-w-4xl my-8 border border-gray-200 mx-auto`}
       >
-        <div>
+        <div className="bg-white lg:bg-transparent">
           <div className="max-w-[750px]">
             <div className=" rounded-lg  shadow-blue-200 lg:h-[470px] lg:w-1/2 p-5">
               <h2 className="text-2xl text-slate-800 text-center lg:text-left font-bold">

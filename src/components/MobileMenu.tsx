@@ -39,7 +39,7 @@ function MobileMenu() {
     <div>
       <Container>
         {/* mobile menu */}
-          <div className={`${mobileMenu} mobile bg-sky-900 fixed bottom-10 md:bottom-0 md:pt-5 lg:hidden top-0 px-10 opacity-75 z-40 left-0  text-white`}>
+          <div className={`${mobileMenu} mobile bg-sky-900 fixed z-50 bottom-10 md:bottom-0 md:pt-5 lg:hidden top-0 px-10 opacity-75 left-0  text-white`}>
             <AiOutlineClose onClick={handleCloseMobileMenu} className=" absolute top-5 md:top-8 cursor-pointer right-4 text-xl"/>
             <div className="flex flex-col justify-center space-y-2 py-10 text-center">
               <Link href="/" className="relative">
@@ -77,7 +77,7 @@ function MobileMenu() {
             </div>
           </div>
 
-          <div className="flex space-x-10 lg:hidden text-2xl fixed bottom-0 left-[50%] -translate-x-[50%] max-w-[500px] px-8 bg-white py-2">
+          <div className="flex space-x-10 lg:hidden text-2xl fixed bottom-0 left-[50%] -translate-x-[50%] max-w-[500px] px-8 z-50 bg-white py-2">
             <IoMenuOutline onClick={handleOpenMobileMenu} className="cursor-pointer" />
             <Link href="/cart" className="relative">
               <CgShoppingCart className="cursor-pointer" />
