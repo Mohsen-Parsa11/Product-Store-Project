@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Image from "next/image";
-import image from "../assets/image1.jpeg"
 import AddToCart from "@/components/AddToCart";
 import { Product } from '@/server-type/type';
 import axios from 'axios';

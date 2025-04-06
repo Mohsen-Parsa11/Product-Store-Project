@@ -2,8 +2,16 @@ import Container from "@/components/Container";
 import Link from "next/link";
 import { Iproducts } from "@/server-type/type";
 
-async function Store() {
-  const result = await fetch(`https://dummyjson.com/products?limit=15`);
+interface Iprops{
+  params: Promise<{title:string}>
+  searchParams: Promise<{}>
+}
+
+
+async function Store({params}:Iprops) {
+
+  const title= (await params).title
+  const result = await fetch(`https://dummyjson.com/products?limit=15?title=${title}`);
   const data = (await result.json()) as Iproducts;
 
   return (

@@ -49,16 +49,16 @@ function Footer() {
                     </a>
                     <div className="flex space-x-4 text-white pt-4">
                       <a href="#">
-                        <BsFacebook />
+                        <BsFacebook className=" hover:saturate-100 hover:rotate-12 hover:text-pink-500 transition duration-150"/>
                       </a>
                       <a href="#">
-                        <BsInstagram />
+                        <BsInstagram className=" hover:saturate-100 hover:rotate-12 hover:text-pink-500 transition duration-150"/>
                       </a>
                       <a href="#">
-                        <BsTwitter />
+                        <BsTwitter className=" hover:saturate-100 hover:rotate-12 hover:text-pink-500 transition duration-150"/>
                       </a>
                       <a href="#">
-                        <BsWhatsapp />
+                        <BsWhatsapp className=" hover:saturate-100 hover:rotate-12 hover:text-pink-500 transition duration-150"/>
                       </a>
                     </div>
                   </div>
