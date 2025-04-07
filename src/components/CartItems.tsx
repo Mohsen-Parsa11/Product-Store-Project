@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AddToCart from "@/components/AddToCart";
 import { Product } from '@/server-type/type';
 import axios from 'axios';
+import Image from 'next/image';
 
 
 interface CartItemsProps {
@@ -21,7 +22,7 @@ function CartItems({id}: CartItemsProps) {
     <div>
         <div className="shadow-md border px-6 lg:px-0 border-gray-300 my-8 rounded grid grid-cols-1 md:grid-cols-12">
           <div className="col-span-3 pl-10 py-5">
-            <img src={data?.thumbnail} alt="image" className="w-40 h-40"/>
+            <Image src={data?.thumbnail as string} alt="image" className="w-40 h-40"/>
             <AddToCart id={id} />
           </div>
           <div className="col-span-8 md:ml-16 lg:pr-4">

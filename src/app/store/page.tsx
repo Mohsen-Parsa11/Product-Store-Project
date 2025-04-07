@@ -4,7 +4,6 @@ import { Iproducts } from "@/server-type/type";
 
 interface Iprops{
   params: Promise<{title:string}>
-  searchParams: Promise<{}>
 }
 
 
