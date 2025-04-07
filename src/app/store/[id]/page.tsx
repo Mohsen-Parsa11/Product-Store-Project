@@ -5,7 +5,6 @@ import { Product } from "@/server-type/type";
 
 interface Iprops{
   params: Promise<{id:string}>
-  searchParams: Promise<{}>
 }
 
 async function ProductItem({params}:Iprops) {   
