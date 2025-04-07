@@ -1,5 +1,4 @@
 import React from "react";
-import Container from "./Container";
 import Image, { StaticImageData } from "next/image";
 import { AiOutlineStar } from "react-icons/ai";
 import { AiFillStar } from "react-icons/ai";

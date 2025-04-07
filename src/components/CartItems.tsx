@@ -9,7 +9,7 @@ interface CartItemsProps {
   qty: number;
 }
 
-function CartItems({id, qty}: CartItemsProps) {
+function CartItems({id}: CartItemsProps) {
     const [data, setData] = useState<Product>()
     useEffect(()=>{
         axios.get(`https://dummyjson.com/products/${id}`).then((res)=>{
