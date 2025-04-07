@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-Image;
 
 interface ISlideData {
   id: number;

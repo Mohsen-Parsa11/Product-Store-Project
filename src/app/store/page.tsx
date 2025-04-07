@@ -1,6 +1,7 @@
 import Container from "@/components/Container";
 import Link from "next/link";
 import { Iproducts } from "@/server-type/type";
+import Image from "next/image";
 
 interface Iprops{
   params: Promise<{title:string}>
@@ -24,8 +25,8 @@ async function Store({params}:Iprops) {
           {data.products.map((item) => (
             <div key={item.id} className="border border-gray-200 shadow-lg rounded-md p-2">
               <Link href={`/store/${item.id}`}>
-                <img
-                  src={item.thumbnail}
+                <Image
+                  src={item.thumbnail as string}
                   alt="image"
                   className="rounded my-2 h-40 mx-auto w-fit"
                 />
