@@ -28,6 +28,8 @@ async function Store({params}:Iprops) {
                 <Image
                   src={item.thumbnail as string}
                   alt="image"
+                  width={100}
+                  height={100}
                   className="rounded my-2 h-40 mx-auto w-fit"
                 />
                 <h3 className="text-xl font-semibold line-clamp-1">
