@@ -1,7 +1,5 @@
 "use client";
 import React, { createContext, useContext, useEffect, useState } from "react";
-import { MdProductionQuantityLimits } from "react-icons/md";
-import { json } from "stream/consumers";
 
 type TShopingCartContextProvider = {
   children: React.ReactNode;
