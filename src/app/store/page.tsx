@@ -13,7 +13,9 @@ async function Store({params}:Iprops) {
   const title= (await params).title
   const result = await fetch(`https://dummyjson.com/products?limit=15&?title=${title}`);
   const data = (await result.json()) as Iproducts;
+  console.log("🚀 ~ Store ~ data:", data)
 
+  
   return (
     <div>
       <Container>
