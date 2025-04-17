@@ -3,6 +3,10 @@ import Container from "./Container";
 import Image from "next/image";
 import logo from "../assets/logo.png";
 import { BsFacebook, BsInstagram, BsTwitter, BsWhatsapp } from "react-icons/bs";
+import { FaAngleRight } from "react-icons/fa";
+
+
+
 
 function Footer() {
   return (
@@ -20,7 +24,13 @@ function Footer() {
                     Home
                   </a>
                   <div>
-                    <p className="text-gray-200">nav</p>
+                    <p className="text-gray-200 text-sm"><span><FaAngleRight className="inline-block"/></span> product</p>
+                  </div>
+                  <div>
+                    <p className="text-gray-200 text-sm"><span><FaAngleRight className="inline-block"/></span> store</p>
+                  </div>
+                  <div>
+                    <p className="text-gray-200 text-sm"><span><FaAngleRight className="inline-block"/></span> cart</p>
                   </div>
                 </div>
                 
@@ -29,7 +39,13 @@ function Footer() {
                     Products
                   </a>
                   <div className="mr-3">
-                    <p className="text-gray-200">men</p>
+                    <p className="text-gray-200 text-sm"><span><FaAngleRight className="inline-block"/></span> furniture</p>
+                  </div>
+                  <div className="mr-3">
+                    <p className="text-gray-200 text-sm"><span><FaAngleRight className="inline-block"/></span> tecknology</p>
+                  </div>
+                  <div className="mr-3">
+                    <p className="text-gray-200 text-sm"><span><FaAngleRight className="inline-block"/></span> packet</p>
                   </div>
                 </div>
 
@@ -38,7 +54,13 @@ function Footer() {
                     FAQ
                   </a>
                   <div>
-                    <p className="text-gray-300 ">shoping</p>
+                    <p className="text-gray-300 text-sm"><span><FaAngleRight className="inline-block"/></span> access</p>
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-sm"><span><FaAngleRight className="inline-block"/></span> mobile</p>
+                  </div>
+                  <div>
+                    <p className="text-gray-300 text-sm"><span><FaAngleRight className="inline-block"/></span> tech</p>
                   </div>
                 </div>
 
